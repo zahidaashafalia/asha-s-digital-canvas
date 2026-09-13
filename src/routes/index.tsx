@@ -118,7 +118,7 @@ function Portfolio() {
 
   return <main className="galaxy-bg min-h-screen text-foreground">
     <div aria-hidden className="stars pointer-events-none fixed inset-0 z-0 opacity-20" />
-    <nav className="glass fixed top-4 left-1/2 z-50 w-[min(94%,72rem)] -translate-x-1/2 rounded-full px-4 py-2 shadow-2xl sm:px-6">
+    <nav className={`glass fixed top-4 left-1/2 z-50 w-[min(94%,72rem)] -translate-x-1/2 px-4 py-2 shadow-2xl transition-[border-radius] sm:px-6 ${menuOpen ? "rounded-xl bg-popover/95" : "rounded-full"}`}>
       <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
         <button aria-label="Home" onClick={() => go("Home")} className="grid size-10 cursor-pointer place-items-center rounded-full bg-primary font-display text-xl text-primary-foreground shadow-[var(--shadow-glow)]">A</button>
         <div className="hidden items-center justify-center gap-5 lg:flex">
